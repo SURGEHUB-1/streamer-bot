@@ -11,6 +11,7 @@
     "name": "StreamerTwo",
     "banner": "https://via.placeholder.com/800x300/6b21a8/ffffff?text=STREAMER+TWO+BANNER",
     "status": "offline",
+     "viewers": "2450",
     "game": "Just Chatting",
     "theme": { "accentColor": "#c026d3" }
   }
