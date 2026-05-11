@@ -9,16 +9,13 @@ async function loadStreamers() {
     const isLive = streamer.status === "LIVE";
     
     const card = document.createElement('div');
-    card.className = `streamer-card ${streamer.theme.animation || 'neon'}`;
-    card.style.setProperty('--accent-color', streamer.theme.accentColor || '#00ffff');
-
+    card.className = 'streamer-card';
+    
     card.innerHTML = `
       <div class="banner">
-        <img src="${streamer.banner}" alt="banner">
+        <img src="${streamer.banner}" alt="${streamer.name} banner">
         ${isLive ? `<div class="live-badge">LIVE • ${streamer.viewers}</div>` : ''}
       </div>
-      
-      <img class="avatar" src="${streamer.avatar}" alt="${streamer.name}">
       
       <div class="info">
         <h2>${streamer.name}</h2>
