@@ -1,93 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #0a0a14;
-  color: white;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  padding: 20px;
-  min-height: 100vh;
-}
-
-
-.header-box {
-  background: #1a1a2e;
-  border-radius: 20px;
-  padding: 40px 30px 25px;
-  text-align: center;
-  margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid #2a2a4a;
-}
-
-.header-box h1 {
-  font-size: 2.8rem;
-  margin-bottom: 8px;
-  background: linear-gradient(90deg, #00ffff, #ff00ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.nav {
-  font-size: 1.1rem;
-  color: #94a3b8;
-  margin: 0;
-  padding: 0;
-}
-
-
-.main-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.section-box {
-  background: #1a1a2e;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid #2a2a4a;
-}
-
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;                    
-  padding-top: 20px;
-}
-
-
-.streamer-card {
-  background: #16213e;
-  border-radius: 20px;          
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s ease;
-  border: 1px solid #2a2a4a;
-  height: 100%;
-}
-
-.streamer-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
-  border-color: var(--accent-color, #00ffff);
-}
-
-
-.banner {
-  height: 160px;
-  position: relative;
-  border-bottom: 1px solid #2a2a4a;
-}
-
+/* Fix for broken banner and avatar */
 .banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .avatar {
@@ -100,59 +16,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 
-.info {
-  padding: 55px 20px 25px;
-  text-align: center;
-}
-
-.info h2 {
-  font-size: 1.5rem;
-  margin-bottom: 6px;
-}
-
-.live-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: #ff0033;
-  color: white;
-  padding: 6px 16px;
-  border-radius: 30px;
-  font-size: 14px;
-  font-weight: bold;
-  animation: livepulse 2s infinite;
-  box-shadow: 0 0 15px #ff0033;
-}
-
-@keyframes livepulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 0, 51, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(255, 0, 51, 0); }
-}
-/* Fix text breaking and banner issues */
-.info h2 {
-  font-size: 1.6rem;
-  word-break: break-word;
-  line-height: 1.2;
-}
-
+/* Fix undefined / blank text */
 .info p {
   color: #94a3b8;
-  font-size: 1rem;
-}
-
-.banner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-  }
+  min-height: 1.2em;
 }
