@@ -7,94 +7,111 @@
 body {
   background: #0a0a14;
   color: white;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  padding: 20px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  padding: 30px 20px;
+  min-height: 100vh;
 }
 
 .header-box {
-  background: #1a1a2e;
-  border-radius: 20px;
-  padding: 40px 30px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 24px;
+  padding: 45px 30px;
   text-align: center;
-  margin-bottom: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border: 1px solid #334155;
 }
 
 .header-box h1 {
-  font-size: 3rem;
-  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a5b4fc, #c026d3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
 }
 
 .nav {
   color: #94a3b8;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
 }
 
-/* Big Wide Cards */
+/* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
-  gap: 35px;
-  max-width: 1600px;
+  gap: 40px;
+  max-width: 1700px;
   margin: 0 auto;
 }
 
+/* Premium Card */
 .streamer-card {
   background: #16213e;
-  border-radius: 24px;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-  transition: all 0.4s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #334155;
   height: 100%;
-  border: 1px solid #2a2a4a;
 }
 
 .streamer-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.15);
+  transform: translateY(-18px);
+  box-shadow: 0 35px 60px rgba(165, 180, 252, 0.15);
+  border-color: #6366f1;
 }
 
 .banner {
-  height: 260px;
+  height: 280px;
   position: relative;
+  background: #1e2937;
 }
 
 .banner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
-.info {
-  padding: 30px;
-  text-align: center;
-}
-
-.info h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.info p {
-  font-size: 1.2rem;
-  color: #94a3b8;
+.streamer-card:hover .banner img {
+  transform: scale(1.08);
 }
 
 .live-badge {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #ff0033;
-  padding: 10px 20px;
+  top: 25px;
+  right: 25px;
+  background: #ef4444;
+  color: white;
+  padding: 8px 22px;
   border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
   animation: livepulse 2s infinite;
 }
 
 @keyframes livepulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 0, 51, 0.8); }
-  70% { box-shadow: 0 0 0 20px rgba(255, 0, 51, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { box-shadow: 0 0 0 25px rgba(239, 68, 68, 0); }
+}
+
+.info {
+  padding: 32px;
+  text-align: center;
+  background: linear-gradient(to bottom, #16213e, #0f172a);
+}
+
+.info h2 {
+  font-size: 2.1rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.info p {
+  color: #94a3b8;
+  font-size: 1.25rem;
 }
