@@ -1,10 +1,11 @@
 [
   {
     "name": "StreamerOne",
-    "avatar": "https://via.placeholder.com/150/1e3a8a/ffffff?text=SO",
-    "banner": "https://via.placeholder.com/600x200/1e3a8a/ffffff?text=Banner",
-    "status": "offline",
-    "game": "blank1",
+    "avatar": "https://via.placeholder.com/150/3b82f6/ffffff?text=SO",
+    "banner": "https://via.placeholder.com/600x200/1e40af/ffffff?text=STREAMERONE",
+    "status": "LIVE",
+    "viewers": "1240",
+    "game": "Valorant",
     "theme": {
       "accentColor": "#00ffff",
       "animation": "neon"
@@ -12,10 +13,10 @@
   },
   {
     "name": "StreamerTwo",
-    "avatar": "https://via.placeholder.com/150/7c3aed/ffffff?text=ST",
-    "banner": "https://via.placeholder.com/600x200/7c3aed/ffffff?text=Banner",
-    "status": "default",
-    "game": "blank2",
+    "avatar": "https://via.placeholder.com/150/a855f7/ffffff?text=ST",
+    "banner": "https://via.placeholder.com/600x200/6b21a8/ffffff?text=STREAMERTWO",
+    "status": "offline",
+    "game": "Just Chatting",
     "theme": {
       "accentColor": "#c026d3",
       "animation": "pulse"
