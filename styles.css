@@ -37,13 +37,23 @@ body {
   letter-spacing: 1px;
 }
 
-/* Grid */
+/* Better Centered Heading */
+.section-box h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #e0e7ff;
+  letter-spacing: 0.5px;
+}
+
+/* Make sure grid is centered */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
   gap: 40px;
   max-width: 1700px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 /* Premium Card */
