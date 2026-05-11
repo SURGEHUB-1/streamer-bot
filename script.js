@@ -14,22 +14,15 @@ async function loadStreamers() {
 
     card.innerHTML = `
       <div class="banner">
-        <img src="${streamer.banner || 'https://via.placeholder.com/600x200/1e2937/ffffff?text=Banner'}" 
-             alt="banner" 
-             onerror="this.src='https://via.placeholder.com/600x200/1e2937/ffffff?text=Banner'">
-        
-        ${isLive ? 
-          `<div class="live-badge">LIVE • ${streamer.viewers}</div>` : ''}
+        <img src="${streamer.banner}" alt="banner">
+        ${isLive ? `<div class="live-badge">LIVE • ${streamer.viewers}</div>` : ''}
       </div>
       
-      <img class="avatar" 
-           src="${streamer.avatar || 'https://via.placeholder.com/150/64748b/ffffff?text=?'}"
-           alt="${streamer.name}"
-           onerror="this.src='https://via.placeholder.com/150/64748b/ffffff?text=?'">
+      <img class="avatar" src="${streamer.avatar}" alt="${streamer.name}">
       
       <div class="info">
         <h2>${streamer.name}</h2>
-        <p>${streamer.game || 'No Game'}</p>
+        <p>${streamer.game || 'Offline'}</p>
       </div>
     `;
     container.appendChild(card);
