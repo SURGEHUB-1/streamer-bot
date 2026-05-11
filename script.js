@@ -6,7 +6,7 @@ async function loadStreamers() {
   container.innerHTML = '';
 
   streamers.forEach(streamer => {
-    const isLive = streamer.status === "LIVE";
+    const isLive = streamer.status === "LIVE" || streamer.status === "live";
     
     const card = document.createElement('div');
     card.className = 'streamer-card';
@@ -14,7 +14,10 @@ async function loadStreamers() {
     card.innerHTML = `
       <div class="banner">
         <img src="${streamer.banner}" alt="${streamer.name} banner">
-        ${isLive ? `<div class="live-badge">LIVE • ${streamer.viewers}</div>` : ''}
+        
+        ${isLive ? 
+          `<div class="live-badge">LIVE • ${streamer.viewers || '1.2K'}</div>` 
+          : ''}
       </div>
       
       <div class="info">
